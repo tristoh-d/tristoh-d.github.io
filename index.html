@@ -32,10 +32,18 @@
         background: var(--bg);
         color: var(--text);
         line-height: 1.6;
+        isolation: isolate;
       }
-
+      #rain-background {
+        position fixed;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: -1;
+      }
+        
       .raindrop{
-        position: fixed;
+        position: absolute;
         top: -15px;
         width: 2px;
         height: 15px;
@@ -53,13 +61,7 @@
           transform: translateY(calc(110vh + 15px));
         }
       }
-      header,
-      main, 
-      footer{
-        position: relative;
-        z-index: 1;
-      }
-      
+        
       header {
         background: transparent;
         color: var(--text);
@@ -272,6 +274,7 @@
    </style>
   </head>
   <body>
+     <div id="rain-background" aria-hidden="true"></div>
     <script>
       const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
@@ -290,7 +293,7 @@
           raindrop.remove();
         });
         
-        document.body.appendChild(raindrop);
+        document.getElementById("rain-background").appendChild(raindrop);
       }
 
       setInterval(createRaindrop, 25);
