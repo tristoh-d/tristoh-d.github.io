@@ -112,6 +112,105 @@
         margin: 0 auto 1.5rem;
         border: 1.5px solid var(--accent);
         border-radius: 6px;
+      
+      /* animations */ 
+      .cursor {
+        display: inline-block;
+        margin-left: 0.15em;
+        color: var(--accent);
+        animation: blink 1s step-end infinite;
+      }
+
+      @keyframes blink {
+        50% {
+        opacity: 0;
+        }
+      }
+    @keyframes enter {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      animation: enter 600ms ease-out both;
+    }
+
+    main > section {
+      animation: enter 500ms ease-out both;
+    }
+
+    main > section:nth-child(1) { animation-delay: 100ms; }
+    main > section:nth-child(2) { animation-delay: 200ms; }
+    main > section:nth-child(3) { animation-delay: 300ms; }
+    main > section:nth-child(4) { animation-delay: 400ms; }
+
+
+    .portrait,
+    .chips li,
+    .project {
+      transition:
+        transform 200ms ease,
+        box-shadow 200ms ease,
+        border-color 200ms ease;
+    }
+
+    a {
+      text-underline-offset: 4px;
+      transition: color 200ms ease;
+    }
+
+    a:hover {
+      color: #86EFAC;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    @media (hover: hover) {
+      .portrait:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 24px rgba(74, 222, 128, 0.18);
+      }
+
+      .chips li:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 12px rgba(74, 222, 128, 0.12);
+      }
+
+    .project:hover {
+      transform: translateX(4px);
+      border-color: #86EFAC;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cursor,
+    header,
+    main > section {
+      animation: none;
+    }
+
+   .portrait,
+   .chips li,
+   .project,
+   a {
+      transition: none;
+   }
+
+   .portrait:hover,
+   .chips li:hover,
+   .project:hover {
+      transform: none;
+  }
+}
       }
     </style>
   </head>
@@ -124,7 +223,9 @@
         width="220"
         height="280"
         />
-      <h1>Triston Hauser</h1>
+      <h1>
+      Triston Hauser<span class="cursor" aria-hidden="true">_</span>
+      </h1>
       <p>Cybersecurity Student | Teaching &amp; Research Assistant | President of Cybersecurity Club</p>
       <p>Austin Peay State University — Class of 2027</p>
       <p>Department of Computer Science &amp; Information Technology</p>
