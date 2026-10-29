@@ -174,44 +174,44 @@
       outline-offset: 4px;
     }
 
-    @media (hover: hover) {
-      .portrait:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 0 24px rgba(74, 222, 128, 0.18);
-      }
+      @media (hover: hover) {
+        .portrait:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 0 24px rgba(74, 222, 128, 0.18);
+        }
 
-      .chips li:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 0 12px rgba(74, 222, 128, 0.12);
-      }
+        .chips li:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 0 12px rgba(74, 222, 128, 0.12);
+        }
 
     .project:hover {
       transform: translateX(4px);
       border-color: #86EFAC;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .cursor,
-    header,
-    main > section {
-      animation: none;
-    }
-
-   .portrait,
-   .chips li,
-   .project,
-   a {
-      transition: none;
-   }
-
-   .portrait:hover,
-   .chips li:hover,
-   .project:hover {
-      transform: none;
-  }
-}
       }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cursor,
+      header,
+      main > section {
+        animation: none;
+      }
+
+     .portrait,
+     .chips li,
+     .project,
+     a {
+        transition: none;
+     }
+
+     .portrait:hover,
+     .chips li:hover,
+     .project:hover {
+        transform: none;
+      }
+    }
+    
     </style>
   </head>
   <body>
