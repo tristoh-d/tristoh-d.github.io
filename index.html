@@ -210,9 +210,35 @@
      .project:hover {
         transform: none;
       }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      margin-top: 2rem;
     }
-    
-    </style>
+
+    nav a {
+      text-decoration: none;
+      padding: 0.35rem 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      border-bottom-color: var(--accent);
+    }
+
+    h2[id] {
+      scroll-margin-top: 1.5rem;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+   </style>
   </head>
   <body>
     <header>
@@ -229,14 +255,26 @@
       <p>Cybersecurity Student | Teaching &amp; Research Assistant | President of Cybersecurity Club</p>
       <p>Austin Peay State University — Class of 2027</p>
       <p>Department of Computer Science &amp; Information Technology</p>
+
+      <nav aria-label="Navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <main>
       <section aria-labelledby="about">
         <h2 id="about">About Me</h2>
         <p>
-          Driven by a passion for continuous learning and technical growth, I am always actively expanding my knowledge of cybersecurity, general IT, mathematics, and more. This portfolio highlights what I have learned and my experiences. 
+          Hi! I am a Computer Information Systems student concentrating in Cybersecurity at Austin Peay State University (APSU). 
+          I also serve as a Teaching and Research Assistant in the CSIT department and serve as President of the APSU Cybersecurity Club.
         </p>
+        <p> I am always expanding my knowledge of cybersecurity, general IT, mathematics, and more. 
+            This portfolio highlights what I have learned and the experiences along my journey.
+        </p>
+        <h2>Professional Research</h2>
         <p> 
           During my work with the CSIT department, I collaborated with Dr. Kriti Chauhan on research accepted at the Decision Sciences Institute (DSI) Conference.
           Our study examined how daily workplace social media usage (categorized into professional, public, and private engagement) impacts employee job and life satisfaction. 
@@ -290,7 +328,7 @@
           </article>
           
           <article class="project">
-            <h3>Personal Projects</h3>
+            <h3>SIEM Home Lab Environment</h3>
             <p></p>
           </article>
       </div>
