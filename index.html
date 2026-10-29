@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triston Hauser | Portfolio</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f7fb;
+        --surface: #ffffff;
+        --text: #1f2933;
+        --muted: #52606d;
+        --accent: #1d4ed8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(120deg, #1e3a8a, #2563eb);
+        color: #fff;
+        padding: 4rem 1.5rem;
+        text-align: center;
+      }
+
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+
+      section {
+        background: var(--surface);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      }
+
+      h1,
+      h2 {
+        margin-top: 0;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .chips li {
+        background: #e0e7ff;
+        color: #1e3a8a;
+        padding: 0.3rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+      }
+
+      .projects {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .project {
+        border-left: 4px solid var(--accent);
+        padding-left: 1rem;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 1rem 1.5rem 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Triston Hauser</h1>
+      <p>Student • Builder • Lifelong Learner</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="about">
+        <h2 id="about">About Me</h2>
+        <p>
+          Welcome to my portfolio. I enjoy building projects that combine
+          creativity and practical problem-solving. This site highlights who I
+          am, what I am learning, and the work I am most proud of.
+        </p>
+      </section>
+
+      <section aria-labelledby="skills">
+        <h2 id="skills">Skills</h2>
+        <ul class="chips">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>GitHub</li>
+          <li>Collaboration</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="projects">
+        <h2 id="projects">Projects</h2>
+        <div class="projects">
+          <article class="project">
+            <h3>Portfolio Website</h3>
+            <p>
+              A personal site designed to present my background, projects, and
+              contact information in a clean and simple layout.
+            </p>
+          </article>
+          <article class="project">
+            <h3>School &amp; Personal Work</h3>
+            <p>
+              A growing collection of assignments and personal builds focused on
+              improving my technical and communication skills.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+        <p>
+          Email:
+          <a href="mailto:triston@example.com">triston@example.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>© <span id="year"></span> Triston Hauser</footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
