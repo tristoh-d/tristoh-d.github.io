@@ -34,6 +34,32 @@
         line-height: 1.6;
       }
 
+      .raindrop{
+        position: fixed;
+        top: -15px;
+        width: 2px;
+        height: 15px;
+        background-color: #4AF626;
+        pointer-events:none;
+        z-index:0;
+        animation: fall linear forwards; 
+      }
+
+      @keyframes fall{
+        from{
+          transform: translateY(0);
+        }
+        to{
+          transform: translateY(calc(110vh + 15px));
+        }
+      }
+      header,
+      main, 
+      footer{
+        position: relative;
+        z-index: 1;
+      }
+      
       header {
         background: var(--bg);
         color: var(--text);
@@ -192,6 +218,10 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+      .raindrop{
+        display:none;
+      }
+      
       .cursor,
       header,
       main > section {
@@ -210,6 +240,7 @@
      .project:hover {
         transform: none;
       }
+    }
     nav {
       display: flex;
       justify-content: center;
@@ -242,22 +273,27 @@
   </head>
   <body>
     <script>
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+        );
       function createRaindrop(){
+        if(reducedMotion.matches) return;
+        
         const raindrop = document.createElement('div');
         raindrop.classList.add('raindrop');
+        raindrop.setAttribute("aria-hidden", "true");
+        
+        raindrop.style.left = Math.random() * 100 + "vw";
+        raindrop.style.animationDuration = Math.random() + 2 + "s";
 
-        raindrop.style.left = Math.random() * window.innerWidth + 'px';
-        const duration = Math.random() * 1 + 0.5;
-        raindrop.style.animationDuration = duration + 's';
-
-        document.body.appendChild(raindrop);
-
-        setTimeout(() -> {
+        raindrop.addEventListener("animationend", () => {
           raindrop.remove();
-            }, duration * 1000);
-      }  
+        });
+        
+        document.body.appendChild(raindrop);
+      }
 
-      setInterval(createRaindrop, 50);
+      setInterval(createRaindrop, 25);
     
     </script>
     <header>
