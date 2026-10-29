@@ -6,12 +6,12 @@
     <title>Triston Hauser | Portfolio</title>
     <style>
       :root {
-        color-scheme: light;
-        --bg: #f5f7fb;
-        --surface: #ffffff;
-        --text: #1f2933;
-        --muted: #52606d;
-        --accent: #1d4ed8;
+        color-scheme: dark;
+        --bg: #263445;
+        --surface: #1F2937;
+        --text: #D1D5DB;
+        --muted: #9CA3AF;
+        --accent: #4ADE80;
       }
 
       * {
@@ -27,8 +27,8 @@
       }
 
       header {
-        background: linear-gradient(120deg, #1e3a8a, #2563eb);
-        color: #fff;
+        background: var(--bg);
+        color: var(--text);
         padding: 4rem 1.5rem;
         text-align: center;
       }
@@ -62,8 +62,8 @@
       }
 
       .chips li {
-        background: #e0e7ff;
-        color: #1e3a8a;
+        background: var(--bg);
+        color: #86EFAC;
         padding: 0.3rem 0.75rem;
         border-radius: 999px;
         font-size: 0.9rem;
@@ -88,26 +88,51 @@
         color: var(--muted);
         padding: 1rem 1.5rem 2rem;
       }
+      
+      h1, h2, h3 {
+        font-family: "Courier New", monospace;
+      }
+      h1 { color: var(--accent); }
+      h2 { color: #F9FAFB; }
+      h3 { color: #86EFAC; }
+      
+      small { color: var(--muted); }
+      
+      .portrait{
+        display: block;
+        width: 220px;
+        height: 280px;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center top;
+        margin: 0 auto 1.5rem;
+        border: 1.5px solid var(--accent);
+        border-radius: 6px;
+      }
     </style>
   </head>
   <body>
     <header>
+      <img 
+        class="portrait"
+        src="portrait.png"
+        alt="Smiling portrait photo of Triston Hauser in suit"
+        width="220"
+        height="280"
+        />
       <h1>Triston Hauser</h1>
-      <p>
-        Cybersecurity Student | Teaching & Research Assistant | President of Cybersecurity Club
-        Austin Peay State University — Class of 2027 | 
-        Department of Computer Science & Information Technology
-      </p>
+      <p>Cybersecurity Student | Teaching &amp; Research Assistant | President of Cybersecurity Club</p>
+      <p>Austin Peay State University — Class of 2027</p>
+      <p>Department of Computer Science &amp; Information Technology</p>
     </header>
 
     <main>
       <section aria-labelledby="about">
         <h2 id="about">About Me</h2>
         <p>
-          Hi! I am a Computer Information Systems student concentrating in Cybersecurity at Austin Peay State University (APSU). I also serve as a Teaching and Research Assistant in the CSIT department and hold President position for the APSU Cybersecurity Club.
           Driven by a passion for continuous learning and technical growth, I am always actively expanding my knowledge of cybersecurity, general IT, mathematics, and more. This portfolio highlights what I have learned and my experiences. 
         </p>
-        </p> 
+        <p> 
           During my work with the CSIT department, I collaborated with Dr. Kriti Chauhan on research accepted at the Decision Sciences Institute (DSI) Conference.
           Our study examined how daily workplace social media usage (categorized into professional, public, and private engagement) impacts employee job and life satisfaction. 
           The findings revealed that using social media for public and professional purposes enhances work-life satisfaction, while personal use during work hours shows no significant impact.
@@ -129,21 +154,41 @@
       <section aria-labelledby="projects">
         <h2 id="projects">Projects</h2>
         <div class="projects">
-          <article class="project">
-            <h3>Portfolio Website</h3>
-            <p>
-              A personal site designed to present my background, projects, and
-              contact information in a clean and simple layout.
-            </p>
+         <article class="project">
+            <h3>National Cyber League Competition</h3>
+            <p></p>
           </article>
+          
           <article class="project">
-            <h3>School &amp; Personal Work</h3>
-            <p>
-              A growing collection of assignments and personal builds focused on
-              improving my technical and communication skills.
-            </p>
+          <h3>Quantum Hackathon</h3>
+            <p></p>
           </article>
-        </div>
+          
+          <article class="project">
+            <h3>PhreakNic 2026</h3>
+            <p></p>
+          </article>
+          
+          <article class="project">
+            <h3>Cybersecurity Club Role and Projects</h3>
+            <p></p>
+          </article>
+          
+          <article class="project">
+            <h3>Competitive Programming Team</h3>
+            <p></p>
+          </article>
+          
+          <article class="project">
+            <h3>APSU Professional Research </h3>
+            <p></p>
+          </article>
+          
+          <article class="project">
+            <h3>Personal Projects</h3>
+            <p></p>
+          </article>
+      </div>
       </section>
 
       <section aria-labelledby="contact">
