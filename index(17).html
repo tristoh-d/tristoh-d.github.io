@@ -54,13 +54,13 @@
         pointer-events:none;
         overflow:hidden;
         z-index:0;
-        opacity:.19
+        opacity:.6
       }
 
       .raindrop {
         position:absolute;
         top:-40px;
-        width:1px;
+        width:3px;
         height:28px;
         background:linear-gradient(transparent, var(--accent));
         animation:fall linear infinite
@@ -542,7 +542,7 @@
           const drop=document.createElement('span');
           drop.className='raindrop';
           drop.style.left=Math.random()*100+'%';
-          drop.style.animationDuration=6+Math.random()*7+'s';
+          drop.style.animationDuration=6+Math.random()*3+'s';
           drop.style.animationDelay=-Math.random()*13+'s';
           rain.appendChild(drop)
         }
